@@ -1213,6 +1213,7 @@ retry:
 				brelse(bh);
 				kfree(is); is = NULL;
 				kfree(bs); bs = NULL;
+					brelse(bh);
 				goto retry;
 			}
 			error = -1;
