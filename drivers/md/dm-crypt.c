@@ -1249,7 +1249,7 @@ static int crypt_decode_key(u8 *key, char *hex, unsigned int size)
 	return 0;
 }
 
-static void crypt_free_tfms(struct crypt_config *cc)
+static void crypt_free_tfms(struct crypt_config *cc, int cpu)
 {
 	unsigned i;
 
@@ -1896,3 +1896,4 @@ module_exit(dm_crypt_exit);
 MODULE_AUTHOR("Christophe Saout <christophe@saout.de>");
 MODULE_DESCRIPTION(DM_NAME " target for transparent encryption / decryption");
 MODULE_LICENSE("GPL");
+
