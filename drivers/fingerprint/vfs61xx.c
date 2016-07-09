@@ -367,7 +367,7 @@ overflow:
 	return status;
 }
 #else
-inline ssize_t vfsspi_readSync(struct vfsspi_devData *vfsSpiDev,
+static inline ssize_t vfsspi_readSync(struct vfsspi_devData *vfsSpiDev,
 	unsigned char *buf, size_t len)
 {
 	int status = 0;
